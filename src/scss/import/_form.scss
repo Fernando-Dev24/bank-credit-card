@@ -1,0 +1,74 @@
+.form-container {
+   position: relative;
+   right: -10%;
+   width: max-content;
+   .form {
+      .input-field {
+         margin-bottom: 1.25rem; /* 20px */
+         label {
+            margin-bottom: 0.3125rem; /* 5px */
+            display: block;
+            font-size: 0.875rem; /* 14px */
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba($color: #171717, $alpha: .8);
+            cursor: pointer;
+         }
+         input {
+            width: 100%;
+            padding: 0.625rem 0.9375rem; /* 10px 15px */
+            font-size: 1rem; /* 16px */
+            border: 1px solid rgba($color: #171717, $alpha: .4);
+            border-radius: 3px;
+            outline: none;
+         }
+      }
+      .fields {
+         label {
+            margin-bottom: 0.3125rem; /* 5px */
+            display: inline;
+            font-size: 0.875rem; /* 14px */
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba($color: #171717, $alpha: .8);
+            cursor: pointer;
+         }
+         .input-field-flex {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem; /* 20px */
+            margin-bottom: 1.25rem; /* 20px */
+            .input-mid-field {
+               label {
+                  display: block;
+                  &.opacity-0 { opacity: 0; pointer-events: none; }
+               }
+               input {
+                  width: 100%;
+                  padding: 0.625rem 0.9375rem; /* 10px 15px */
+                  font-size: 0.875rem; /* 14px */
+                  border: 1px solid rgba($color: #171717, $alpha: .4);
+                  border-radius: 3px;
+                  outline: none;
+               }
+            }
+         }
+      }
+      .btn-submit {
+         width: 100%;
+         display: block;
+         padding: 0.9375rem; /* 15px */
+         font-size: 1rem; /* 16px */
+         border: none;
+         border-radius: 3px;
+         outline: none;
+         color: #FFF;
+         background: #5e2563;
+         cursor: pointer;
+         transition: all .3s ease;
+         &:hover { background: rgba($color: #5e2563, $alpha: .9); }
+      }
+   }
+}
