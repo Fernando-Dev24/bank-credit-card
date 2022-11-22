@@ -22,6 +22,10 @@
             border: 1px solid rgba($color: #171717, $alpha: .4);
             border-radius: 3px;
             outline: none;
+            transition: all .3s ease;
+            &:focus {
+               border-color: #171717;
+            }
          }
       }
       .fields {
@@ -52,9 +56,19 @@
                   border: 1px solid rgba($color: #171717, $alpha: .4);
                   border-radius: 3px;
                   outline: none;
+                  transition: all .3s ease;
+                  &:focus {
+                     border-color: #171717;
+                  }
                }
             }
          }
+      }
+      .form-error {
+         display: block;
+         margin-bottom: 0.625rem; /* 10px */
+         font-weight: 600;
+         color: #FF6464;
       }
       .btn-submit {
          width: 100%;
