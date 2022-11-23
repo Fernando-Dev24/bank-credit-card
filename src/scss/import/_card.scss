@@ -81,3 +81,30 @@
       }
    }
 }
+
+/* media queries */
+@media screen and (max-width: 768px) {
+   .cards {
+      display: grid;
+      place-items: center;
+      padding: 40px;
+      .frontal-card, .reverse-card {
+         position: initial;
+         width: 90%;
+      }
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .cards {
+      padding: 1.25rem 0; /* 20px 0 */
+      .frontal-card .frontal-card-body {
+         h3 {
+            font-size: 23px;
+         }
+      }
+      .frontal-card-body .frontal-card-info p {
+         font-size: 0.75rem; /* 12px */
+      }
+   }
+}

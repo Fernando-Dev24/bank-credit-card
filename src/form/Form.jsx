@@ -15,7 +15,21 @@ export const Form = ({ formValues, handleChange }) => {
       e.preventDefault();
 
       // Validations
-      handleValidate(formValues);
+      const message = handleValidate(formValues);
+      if( message !== null ) {
+         setAlertState({ state: true, content: message });
+         return;
+      };
+
+      // set alert state as if there is any problem
+      setAlertState({ state: false, content: null });
+
+      // Try on submit form
+      try {
+         alert("Submiting form...")
+      } catch(error) {
+         setAlertState({ state: true, content: 'Ha habido un problema, vuelve a intentarlo más tarde' });
+      };
    };
    
    return (
@@ -79,7 +93,7 @@ export const Form = ({ formValues, handleChange }) => {
                   </article>
                </article>
             </article>
-            <small className='form-error'>This is gonna be an error</small>
+            { alertState?.state && <small className='form-error'>{ alertState?.content }</small> }
             <button className='btn btn-submit'>
                Confirm
             </button>

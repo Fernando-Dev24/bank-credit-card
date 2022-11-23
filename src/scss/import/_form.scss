@@ -4,6 +4,7 @@
    width: max-content;
    .form {
       .input-field {
+         width: 100%;
          margin-bottom: 1.25rem; /* 20px */
          label {
             margin-bottom: 0.3125rem; /* 5px */
@@ -83,6 +84,29 @@
          cursor: pointer;
          transition: all .3s ease;
          &:hover { background: rgba($color: #5e2563, $alpha: .9); }
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .form-container {
+      position: initial;
+      width: 100%;
+      padding: 2.5rem; /* 40px */
+      .form {
+         width: 100%;
+         .input-field {
+            width: 100%;
+         }
+         .fields {
+            .input-field-flex {
+               grid-template-columns: repeat(1, 1fr);
+               gap: 1.25rem;
+               .input-mid-field {
+                  label.opacity-0 { display: none; }
+               }
+            }
+         }
       }
    }
 }

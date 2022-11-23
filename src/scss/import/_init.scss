@@ -35,3 +35,13 @@ body {
       background: #F2F2F2;
    }
 }
+
+/* media queries */
+@media screen and (max-width: 768px) {
+   .layout-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      .form-wrapper {
+         display: block;
+      }
+   }
+}
